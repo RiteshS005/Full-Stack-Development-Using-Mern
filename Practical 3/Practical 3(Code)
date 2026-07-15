@@ -1,0 +1,273 @@
+QA)
+function App()
+{
+  return (
+    <div>
+      <h1> Welcome to MERN Stack Development</h1>
+      <>
+    </div>
+  );
+}
+
+
+export default App
+
+QB)
+a)code
+function App()
+{
+  const emp="varun";
+  const dept="IT";
+  const sal=50000;
+  return (
+    <div>
+      <h1>Employee Details</h1>
+      <p>Name:{emp}</p>
+      <p>Department:{dept}</p>
+      <p>Salary:{sal}</p>
+    </div>
+  );
+}
+export default App
+
+b)code
+function App()
+{
+  const studentName = "Ritesh";
+  const totalClasses = 60;
+  const attendedClasses = 54;
+  const attendance = (attendedClasses / totalClasses) * 100;
+ return (
+    <div>
+      <h1>Atendance Details</h1>
+      <hr />
+      <p>Name: {studentName}</p>
+      <p>Total Classes: {totalClasses}</p>
+      <p>Classes Attended: {attendedClasses}</p>
+      <p>Attendence: {attendance.toFixed(2)}%</p>
+      <h2>
+        Status: {attendance >= 75? "Eligible for Exam" : "Not Eligible"}
+      </h2>
+    </div>
+  );
+}
+export default App
+
+QC)
+function App()
+{
+  const name = "Ritesh"
+  const math = 85;
+  const sci = 90;
+
+
+  function calculator(mark1 , mark2){return mark1 + mark2}
+
+
+  return(
+    <div>
+      <h1> Student Marks </h1>
+      <hr />
+      <p>Name: {name}</p>
+      <p>Mathematics Marks: {math}</p>
+      <p>Science Marks : {sci}</p>
+      <hr/>
+      <p>Total Marks: {calculator(math , sci)}</p>
+    </div>
+  );
+}
+
+
+export default App
+
+QD)
+APP.JSX
+import "./App.css";
+function App(){
+  return (
+    <div className="container">
+      <h1>Student Dashboard</h1>
+      <hr />
+      <p>Name: Ritesh Chaubey</p>
+      <p>Roll Number:101</p>
+      <p>Course :Mca</p>
+      <p>Semester :V</p>
+      <button>View result</button>
+    </div>
+  )
+
+
+}
+export default App
+
+APP.CSS
+.counter {
+  width:700px;
+  margin:50px auto;
+  padding:20px;
+  border:2px solid black;
+  border-radius:10 px;
+  background-color:whitesmoke;
+  text-align:center;
+}
+h1{
+  color:darkblue;
+}
+p{
+  font-size:18px;
+  color:black;
+}
+button{
+  background-color:green;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  font-size:16px;
+  border-radius:5px;
+  cursor:pointer;
+}
+button:hover{
+  background-color: darkgreen;
+}
+
+QE)
+(App.jsx)
+import Student from "./components/Student";
+function App(){
+  return (
+    <div>
+      <h1>Student Dashboard</h1>
+      <hr />
+      <Student />
+    </div>
+  )
+}
+export default App;
+
+
+Components (student.jsx)
+function Student(){
+  return (
+    <div>
+      <p>Name: Ritesh Chaubey</p>
+      <p>Roll Number:101</p>
+      <p>Course :Mca</p>
+      <p>Semester :V</p>
+      <button>View result</button>
+    </div>
+  )
+}
+export default Student;
+
+QEXTRA)
+App.jsx:-
+import HelloStudent from "./components/HelloStudent";
+import WelcomeMessage from "./components/WelcomeStudent";
+import ProfileCard from "./components/ProfileCard";
+import SkillsList from "./components/Skill";
+import "./App.css"
+function App() {
+ return (
+   <div>
+     <h1>My React App</h1>
+     <hr />
+     <HelloStudent />
+     <hr />
+     <WelcomeMessage />
+     <hr />
+     <ProfileCard />
+     <hr />
+     <SkillsList />
+   </div>
+ );
+}
+export default App;
+
+App.css:
+body {
+ margin: 0;
+ font-family: Arial, sans-serif;
+ background-color: whitesmoke;
+}
+
+.app {
+ max-width: 700px;
+ margin: 40px auto;
+ padding: 20px;
+}
+
+h1 {
+ text-align: center;
+ color:darkgreen;
+}
+
+.card {
+ background-color: white;
+ border: 1px solid #d6e0f5;
+ border-radius: 8px;
+ padding: 16px;
+ margin-bottom: 16px;
+}
+.card h2 {
+ color: #2c5aa0;
+ margin-top: 0;
+}
+
+.card p {
+ color: #333333;
+}
+.card li {
+ margin-bottom: 6px;
+}
+
+HelloStudent.jsx:
+function HelloStudent() {
+ return (
+   <div>
+     <h2>Hello, student!</h2>
+     <p>This is my first functional component.</p>
+   </div>
+ );
+}
+export default HelloStudent;
+WelcomeStudent.jsx:
+function WelcomeMessage() {
+ return (
+   <div>
+     <h2>Welcome to React</h2>
+     <p>React lets us build pages using small reusable components.</p>
+   </div>
+ );
+}
+export default WelcomeMessage;
+
+ProfileCard.jsx:
+function ProfileCard() {
+ return (
+   <div>
+     <h2>Student Profile</h2>
+     <p>Name: Ritesh Chaubey</p>
+     <p>Course: BSc.IT</p>
+     <p>RollNO: T005</p>
+     <p>College: Sheth L.U.J.and Sir M.V College of Art Commerce and Science.</p>
+   </div>
+ );
+}
+export default ProfileCard;
+
+Skill.jsx:
+function SkillsList() {
+ return (
+   <div>
+     <h2>My Skills</h2>
+       <p>HTML</p>
+       <p>CSS</p>
+       <p>JavaScript</p>
+       <p>React</p>
+       <p>Python</p>
+       <p>Data Science</p>
+   </div>
+ );
+}
+export default SkillsList;
+
